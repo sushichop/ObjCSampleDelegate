@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fe6-IE-kEa">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Receiver-->
+        <scene sceneID="cmX-20-KaY">
+            <objects>
+                <viewController title="Receiver" id="fe6-IE-kEa" customClass="ReceiverViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hzc-ub-alP"/>
+                        <viewControllerLayoutGuide type="bottom" id="USc-yh-wfM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i0F-Sg-u2P">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgn-Yn-nzG">
+                                <rect key="frame" x="16" y="285" width="568" height="30"/>
+                                <state key="normal" title="move to SenderViewController">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="A49-LX-FIB" kind="show" identifier="SenderView" id="HoW-tQ-c4G"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dgn-Yn-nzG" firstAttribute="leading" secondItem="i0F-Sg-u2P" secondAttribute="leadingMargin" id="NVA-Gf-FX8"/>
+                            <constraint firstAttribute="centerY" secondItem="dgn-Yn-nzG" secondAttribute="centerY" id="lkD-SC-tZQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dgn-Yn-nzG" secondAttribute="trailing" id="ymM-Cx-LWW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BXf-bw-Wzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="290" y="1035"/>
+        </scene>
+        <!--Sender-->
+        <scene sceneID="c7g-TB-hNO">
+            <objects>
+                <viewController title="Sender" id="A49-LX-FIB" customClass="SenderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Jm-NV-SpQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="0do-0u-jgs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="crT-Xh-OPI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEX-UB-xPF">
+                                <rect key="frame" x="16" y="285" width="568" height="30"/>
+                                <state key="normal" title="go back to ReceiverViewController">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack:" destination="A49-LX-FIB" eventType="touchUpInside" id="uci-IQ-fme"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PEX-UB-xPF" firstAttribute="leading" secondItem="crT-Xh-OPI" secondAttribute="leadingMargin" id="DSC-iu-1Fb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PEX-UB-xPF" secondAttribute="trailing" id="mwp-4s-ovv"/>
+                            <constraint firstAttribute="centerY" secondItem="PEX-UB-xPF" secondAttribute="centerY" id="ylw-jg-vxj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SA8-jV-Qqp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978" y="1033"/>
+        </scene>
+    </scenes>
+</document>
